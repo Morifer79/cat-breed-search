@@ -1,18 +1,18 @@
+* {
+	user-select: none;
+}
+
+*:focus {
+	outline: none;
+}
+
 .cat-info{
 	margin-top: 25px;
 	display: flex;
 }
 .breed-select{
+	width: 1025px;
 	cursor: pointer;
-	border-top-left-radius: 6px;
-	border-bottom-right-radius: 6px;
-	border: 3px double black;
-	min-width: 1025px;
-}
-
-.breed-select:hover,
-.breed-select:focus {
-	outline: none;
 }
 .thumb{
 	max-width: 600px;
@@ -53,4 +53,33 @@
 	100% {
 		left: 125%;
 	}
+}
+
+.option:hover {
+	color: #fff;
+	transition: 0.3s ease all;
+}
+
+.option:nth-child(6n+1):hover{
+	background-color: #000;
+}
+
+.option:nth-child(6n+2):hover {
+	background-color: #ea4c89;
+}
+
+.option:nth-child(6n+3):hover {
+	background-color: #0057ff;
+}
+
+.option:nth-child(6n+4):hover {
+	background-color: #32c766;
+}
+
+.option:nth-child(6n+5):hover {
+	background-color: #f48024;
+}
+
+.option:nth-child(6n+6):hover {
+	background-color: #006400;
 }

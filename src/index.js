@@ -2,16 +2,13 @@ import {fetchBreeds, fetchCatByBreed} from "./js/cat-api";
 import { Report } from 'notiflix/build/notiflix-report-aio';
 import {Loading} from 'notiflix/build/notiflix-loading-aio';
 
-const breedSelect = document.querySelector('.breed-select');
+const optionPoint = document.querySelector('.option');
+const breedSelect = document.querySelector('.breed-select'); //selectBtn
 const catInfo = document.querySelector('.cat-info');
 
-// Loading.hourglass('Loading data, please wait...');
-
 fetchBreeds().then(data => {
-	console.log(data);
-	
 	const option = data
-	.map(({id, name}) => `<option value="${id}">${name}</option>`);
+	.map(({id, name}) => `<option class="option" value="${id}">${name}</option>`);
 		breedSelect.innerHTML = option;
 		Loading.remove()})
 	.catch(() => {Report.failure('MEOW!', 'Something went wrong! Try reloading the page!', '😿')});
