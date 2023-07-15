@@ -24,11 +24,18 @@ body{
 .breed-select {
 	width: 1025px;
 	cursor: pointer;
+	background: inherit;
+	border: 3px double black;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
 }
 
 .thumb {
 	max-width: 600px;
 	margin-left: 25px;
+	border: 3px double black;
+	border-top-right-radius: 50px;
+	border-bottom-left-radius: 50px;
 }
 
 .thumb-pic {
@@ -37,6 +44,7 @@ body{
 }
 
 img{
+	display: block;
 	border: 3px double black;
 	border-top-left-radius: 50px;
 	border-bottom-right-radius: 50px;
@@ -78,9 +86,12 @@ img{
 	pointer-events: none;
 }
 
+.option{
+	transition: background-color 0.3s ease-in-out;
+}
+
 .option:hover {
 	color: #fff;
-	transition: background-color 0.3s ease-in-out;
 }
 
 .option:nth-child(7n+1):hover {
