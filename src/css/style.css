@@ -6,9 +6,19 @@
 	outline: none;
 }
 
+body{
+	background: url(../images/bg_repeat.jpg);
+}
+
+.container{
+	margin: 0 auto;
+	text-align: center;
+}
+
 .cat-info {
-	margin-top: 25px;
+	margin: 25px;
 	display: flex;
+	justify-content: center;
 }
 
 .breed-select {
@@ -23,6 +33,13 @@
 
 .thumb-pic {
 	position: relative;
+	overflow: hidden;
+}
+
+img{
+	border: 3px double black;
+	border-top-left-radius: 50px;
+	border-bottom-right-radius: 50px;
 }
 
 .thumb-pic::before {
@@ -57,31 +74,39 @@
 	}
 }
 
-.option:hover {
-	color: #fff;
-	transition: 0.3s ease all;
+.option:first-child {
+	pointer-events: none;
 }
 
-.option:nth-child(6n+1):hover {
+.option:hover {
+	color: #fff;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.option:nth-child(7n+1):hover {
 	background-color: #000;
 }
 
-.option:nth-child(6n+2):hover {
+.option:nth-child(7n+2):hover {
 	background-color: #ea4c89;
 }
 
-.option:nth-child(6n+3):hover {
-	background-color: #0057ff;
-}
-
-.option:nth-child(6n+4):hover {
+.option:nth-child(7n+3):hover {
 	background-color: #32c766;
 }
 
-.option:nth-child(6n+5):hover {
+.option:nth-child(7n+4):hover {
+	background-color: #04266b;
+}
+
+.option:nth-child(7n+5):hover {
 	background-color: #f48024;
 }
 
-.option:nth-child(6n+6):hover {
+.option:nth-child(7n+6):hover {
 	background-color: #006400;
+}
+
+.option:nth-child(7n+7):hover {
+	background-color: #ff0000;
 }
