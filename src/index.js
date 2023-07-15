@@ -5,20 +5,33 @@ import {Loading} from 'notiflix/build/notiflix-loading-aio';
 const breedSelect = document.querySelector('.breed-select');
 const catInfo = document.querySelector('.cat-info');
 
+const toggleSelectLoad = () => {
+	breedSelect.style.opacity = 1;
+	Loading.remove();
+}
+
+const toggleLoadSelect = () => {
+	Loading.hourglass('Loading data, please wait...');
+	breedSelect.style.opacity = 0;
+}
+
+toggleLoadSelect();
+
 fetchBreeds().then(data => {
+	toggleSelectLoad();
 	const option = data
 	.map(({id, name}) => `<option class="option" value="${id}">${name}</option>`);
 		breedSelect.insertAdjacentHTML('beforeend', option);
-		Loading.remove()})
+		})
 	.catch(() => {Report.failure('MEOW!', 'Something went wrong! Try reloading the page!', '😿')});
 
 breedSelect.addEventListener('change', (e) => {
 	e.preventDefault();
-	Loading.hourglass('Loading data, please wait...');
+	toggleLoadSelect();
 	const breedSelectId = breedSelect.value;
 	fetchCatByBreed(breedSelectId)
 	.then(cat => {
-		Loading.remove();
+		toggleSelectLoad();
 		const info = `
 		<div class='thumb-pic'><img src="${cat.url}" alt="${cat.id}" width=400></div>
 		<div class='thumb'>
