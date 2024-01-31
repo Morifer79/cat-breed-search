@@ -17,7 +17,7 @@ To get started with this project, follow the installation instructions below.
 1. Clone the repository:
    ```bash
    git clone https://github.com/Morifer79/cat-breed-search.git
-   cd js-homework-4-app
+   cd cat-breed-search-app
    ```
 2. Install the dependencies:
    ```bash
