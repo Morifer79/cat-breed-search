@@ -1,5 +1,6 @@
 # ℂ𝕒𝕥 𝔹𝕣𝕖𝕖𝕕 𝕊𝕖𝕒𝕣𝕔𝕙
 ## 𝔽𝕚𝕗𝕥𝕙 𝕙𝕠𝕞𝕖𝕨𝕠𝕣𝕜 𝕠𝕟 𝕁𝕒𝕧𝕒 𝕊𝕔𝕣𝕚𝕡𝕥
+![Cat Breed Search](./src/images/cat-breed.jpg)  
 
 This project was created using [Parcel](https://parceljs.org/).  
 
